@@ -1,6 +1,6 @@
 import './Viewsubcategory.css';
 import axios from 'axios';
-import { _categoryapiurl,_subcategoryapiurl } from '../../api_url';
+import { _subcategoryapiurl } from '../../api_url';
 import { useState,useEffect } from 'react';
 import { useParams , Link } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ function Viewsubcategory(){
                                         scList.map((row) => (
                                             <Link to={`/viewproduct/${row.subcatnm}`}>
                                     <div class="category_part">  
-                                    <img src={`../assets/uploads/subcaticon/${row.subcaticonnm}`} height="100" width="150"/>
+                                    <img src={`../assets/uploads/subcaticon/${row.subcaticonnm}`} alt="cat" height="100" width="150"/>
                                     <br/>
                                     <b>{row.subcatnm}</b>
                                     </div>
